@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: darkgray;
+    background-color: white;
 }
 
 .header {
@@ -47,6 +47,11 @@ a {
     text-decoration: none;
 }
 
+p {
+    color:black;
+    padding: 20px;
+}
+
 .left {
     margin-left: 0px;
     padding: 0px;
@@ -56,22 +61,26 @@ a {
     text-align: center;
     clear: both;
     float: left;
-    width: 20%;
-    height: 100vh;
+    width: 15vw;
+    height: 160vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color:darkblue;
+    background-color: white;
+}
+    
+.about-me, .about-me h2 {
+    position: relative;
+    color: navy;
+    display: flex;
+    top: -150px;    
+    justify-content: right;
 }
 
-.about-me, .my-work, .contact-me {
-    margin-bottom: 32px;
-    color: #ffffff;
-} 
-
-.about-me h2, .my-work h2, .contact-me h2 {
-    color: white;
-    display: block;
-    margin: 10px auto;
-    max-width: 150px
+.my-work, .mywork h2 {
+    position: relative;
+    color: navy;
+    display: flex;
+    top: -460px;    
+    justify-content: right;
 }
 
 .main{
@@ -79,43 +88,130 @@ a {
     justify-content: center;
     flex-direction: column;
 }
+
+/* --------------------------------------------------- */
+/* About me */
+
+.aboutMe {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+}
+
+/* --------------------------------------------------- */
+/* Work */
+
+.work {
+    height: 33%;
+    width: 100%;
+}
+
 /* --------------------------------------------------- */
 /* Projects section */
 
 .projectContainer{
-    width: 70vw;
+    width: 80vw;
     display: flex;
     flex-wrap: wrap;
-    flex: 0 0 70%;
+    flex: 0 0 33%;
+    justify-content: center;
 }
 
 
 .projectOne{
-    min-height: 150px;
-    min-width: 250px;
-    background: chocolate;
-    margin:10px;
-    padding:10px;
+    margin-top: 10px;
+    margin-left: 30px;
+    min-height: 500px;
+    flex-basis: 1000px;
     border-radius: 5px;
     box-shadow: 10px 0 5px 5px black;
 }
 
 .projects{
-    min-height: 150px;
-    min-width: 200px;
-    background: chocolate;
-    margin:10px;
-    padding:10px;
+    margin-top: 30px;
+    margin-left: 30px;
+    min-height: 250px;
+    flex-basis: 475px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 0 5px 5px black;
 }
 
 .horiseon{
-    background-image: url('./images/2021-10-24.png');
-    background-size:cover;
+    background-image: url('./images/Screenshot\ 2021-10-31\ 161617.png');
+    background-size: cover;
     background-position: center;
 
 }
 
-a:hover, :focus {
+.html {
+    background-image: url('./images/HTM.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.css {
+    background-image: url('./images/CSS.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.javascript {
+    background-image: url('./images/javascript.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.webApi {
+    background-image: url('./images/Web-APIs-graphic.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+a:hover {
  transform: scale(1.1);
+}
+
+/* --------------------------------------------------------------- */
+/* Footer */
+
+.footer {
+    display: flex;  
+    justify-content: space-between;  
+    font-family: 'Rampart One', cursive;
+    background-image:linear-gradient(black, blue, white);
+    color: white;
+    margin-top: 40px;
+    padding: 70px;
+}
+
+.footer h2 {
+    display: inline-block;
+    font-size: 26px;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-left: 250px;
+    margin-top: -40px;
+}
+
+.contactMe {
+    height: 33%;
+    width: 100%;
+}
+
+@media screen and (max-width:fullscreen) {
+    .header, .left, .projectContainer, .footer {
+    width: 50%;
+    }
+}
+
+@media screen and (min-width:horizontal) {
+    .header, .left, .projectContainer, .footer {
+    width: 100%;
+    }
 }
 
