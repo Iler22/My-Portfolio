@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-picture {
+  height: 2px;
+}
+
+.main-picture {
+  padding: 10%;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.picture {
+  padding: 10px;
+  margin-left: 100px;
+  width: 35vw;
+}
